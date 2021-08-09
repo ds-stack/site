@@ -1,0 +1,16 @@
+- Home
+- About
+	- About section with photo
+	- Skills Map/Slider by Categories
+	- Journey
+		- Companies I've worked for in detail
+- Blog
+	- date
+	- category
+	- content
+- Art
+	- Photography
+	- Music
+- Reviews
+	- Linkedin Recommendation (https://www.elastic.co/customers/)
+- Contact
