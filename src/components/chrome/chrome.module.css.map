@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAW;EACT,OAAO,EAAE,YAAY",
+"sources": ["chrome.module.scss"],
+"names": [],
+"file": "chrome.module.css"
+}

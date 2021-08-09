@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 ul li {
   font-weight: 600
 }
@@ -543,7 +544,7 @@ html {
   font-family: Muli;
   font-weight: 200;
   font-style: normal;
-  src: url(./assets/fonts/muli/Muli-ExtraLight.ttf) format("truetype");
+  src: url(../assets/fonts/muli/Muli-ExtraLight.ttf) format("truetype");
   font-display: swap
 }
 
@@ -551,7 +552,7 @@ html {
   font-family: Muli;
   font-weight: 300;
   font-style: normal;
-  src: url(./assets/fonts/muli/Muli-Light.ttf) format("truetype");
+  src: url(../assets/fonts/muli/Muli-Light.ttf) format("truetype");
   font-display: swap
 }
 
@@ -559,7 +560,7 @@ html {
   font-family: Muli;
   font-weight: 400;
   font-style: normal;
-  src: url(./assets/fonts/muli/Muli-Regular.ttf) format("truetype");
+  src: url(../assets/fonts/muli/Muli-Regular.ttf) format("truetype");
   font-display: swap
 }
 
@@ -567,7 +568,7 @@ html {
   font-family: Muli;
   font-weight: 700;
   font-style: normal;
-  src: url(./assets/fonts/muli/Muli-Bold.ttf) format("truetype");
+  src: url(../assets/fonts/muli/Muli-Bold.ttf) format("truetype");
   font-display: swap
 }
 
@@ -575,7 +576,7 @@ html {
   font-family: Muli;
   font-weight: 900;
   font-style: normal;
-  src: url(./assets/fonts/muli/Muli-Black.ttf) format("truetype");
+  src: url(../assets/fonts/muli/Muli-Black.ttf) format("truetype");
   font-display: swap
 }
 
@@ -583,7 +584,7 @@ html {
   font-family: Poppins;
   font-weight: 300;
   font-style: normal;
-  src: url(./assets/fonts/poppins/Poppins-Light.ttf) format("truetype");
+  src: url(../assets/fonts/poppins/Poppins-Light.ttf) format("truetype");
   font-display: swap
 }
 
@@ -591,7 +592,7 @@ html {
   font-family: Poppins;
   font-weight: 400;
   font-style: normal;
-  src: url(./assets/fonts/poppins/Poppins-Regular.ttf) format("truetype");
+  src: url(../assets/fonts/poppins/Poppins-Regular.ttf) format("truetype");
   font-display: swap
 }
 
@@ -599,7 +600,7 @@ html {
   font-family: Poppins;
   font-weight: 600;
   font-style: normal;
-  src: url(./assets/fonts/poppins/Poppins-SemiBold.ttf) format("truetype");
+  src: url(../assets/fonts/poppins/Poppins-SemiBold.ttf) format("truetype");
   font-display: swap
 }
 
@@ -607,7 +608,7 @@ html {
   font-family: Poppins;
   font-weight: 700;
   font-style: normal;
-  src: url(./assets/fonts/poppins/Poppins-Bold.ttf) format("truetype");
+  src: url(../assets/fonts/poppins/Poppins-Bold.ttf) format("truetype");
   font-display: swap
 }
 
@@ -803,7 +804,7 @@ html {
   margin-top: -1px;
   margin-left: 20px;
   background-repeat: no-repeat;
-  background-image: url(./assets/images/arrow_right_light-blue.png);
+  background-image: url(../assets/images/arrow_right_light-blue.png);
   background-size: 44px 8px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -1043,7 +1044,7 @@ html {
     padding: 20px;
     background-position: right 20px center;
     background-repeat: no-repeat;
-    background-image: url(./assets/images/info_blue.png);
+    background-image: url(../assets/images/info_blue.png);
     background-size: 22px 22px;
     border-radius: 2px;
     border: 1px solid #ebeef0;
@@ -1083,7 +1084,7 @@ html {
   padding-top: 62px;
   background-position: 20px 20px;
   background-repeat: no-repeat;
-  background-image: url(./assets/images/info_blue.png);
+  background-image: url(../assets/images/info_blue.png);
   background-color: #fff;
   background-size: 22px 22px;
   border-radius: 3px;
@@ -1099,7 +1100,7 @@ html {
   width: 18px;
   height: 18px;
   background-repeat: no-repeat;
-  background-image: url(./assets/images/breadcrumb_close.png);
+  background-image: url(../assets/images/breadcrumb_close.png);
   background-color: transparent;
   background-size: 18px 18px;
   border: 0;
@@ -1209,7 +1210,7 @@ html {
   margin-top: -1px;
   margin-left: 20px;
   background-repeat: no-repeat;
-  background-image: url(./assets/images/arrow_right_gray.png);
+  background-image: url(../assets/images/arrow_right_gray.png);
   background-size: 44px 8px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -1460,7 +1461,7 @@ body.breadcrumb-fixed .breadcrumb {
   height: 12px;
   margin-top: -1px;
   background-repeat: no-repeat;
-  background-image: url(./assets/images/breadcrumb_caret_right.png);
+  background-image: url(../assets/images/breadcrumb_caret_right.png);
   background-size: 7px 12px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -1523,7 +1524,7 @@ body.breadcrumb-fixed .breadcrumb {
   margin-left: auto;
   background-position: 50%;
   background-repeat: no-repeat;
-  background-image: url(./assets/images/breadcrumb_more.png);
+  background-image: url(../assets/images/breadcrumb_more.png);
   background-color: transparent;
   background-size: 5px 20px;
   border: 0;
@@ -1538,7 +1539,7 @@ body.breadcrumb-fixed .breadcrumb {
   width: 25px;
   height: 25px;
   margin-right: -5px;
-  background-image: url(./assets/images/breadcrumb_close.png);
+  background-image: url(../assets/images/breadcrumb_close.png);
   background-size: 15px 15px
 }
 
@@ -1656,7 +1657,7 @@ body.breadcrumb-fixed .breadcrumb {
   height: 8px;
   margin-left: 20px;
   background-repeat: no-repeat;
-  background-image: url(./assets/images/arrow_right_black.png);
+  background-image: url(../assets/images/arrow_right_black.png);
   background-size: 44px 8px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -1886,7 +1887,7 @@ body.breadcrumb-fixed .breadcrumb {
   margin-top: -1px;
   margin-left: 15px;
   background-repeat: no-repeat;
-  background-image: url(./assets/images/arrow_right_white.png);
+  background-image: url(../assets/images/arrow_right_white.png);
   background-size: 44px 8px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -1900,7 +1901,7 @@ body.breadcrumb-fixed .breadcrumb {
 }
 
 .contact .contact-form .contact-form-actions .contact-form-submit:hover:after {
-  background-image: url(./assets/images/arrow_right_black.png)
+  background-image: url(../assets/images/arrow_right_black.png)
 }
 
 .contact .contact-form .contact-form-actions .contact-form-social {
@@ -2475,7 +2476,7 @@ body {
   height: 10px;
   background-position: 100%;
   background-repeat: no-repeat;
-  background-image: url(./assets/images/filter_open.png);
+  background-image: url(../assets/images/filter_open.png);
   background-size: 5px 10px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -2521,7 +2522,7 @@ body {
 .filter.is-active .filter-handle:after {
   width: 8px;
   height: 8px;
-  background-image: url(./assets/images/filter_close.png);
+  background-image: url(../assets/images/filter_close.png);
   background-size: 8px 8px
 }
 
@@ -2769,7 +2770,7 @@ body {
   margin-top: -1px;
   margin-left: 15px;
   background-repeat: no-repeat;
-  background-image: url(./assets/images/arrow_right_white.png);
+  background-image: url(../assets/images/arrow_right_white.png);
   background-size: 44px 8px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -2783,7 +2784,7 @@ body {
 }
 
 .footer .footer-form .footer-submit:hover:after {
-  background-image: url(./assets/images/arrow_right_dark-blue.png)
+  background-image: url(../assets/images/arrow_right_dark-blue.png)
 }
 
 .footer .footer-form.has-error .footer-input {
@@ -3096,11 +3097,11 @@ body {
 }
 
 .header .header-right .header-language .header-language-flag.is-en {
-  background-image: url(./assets/images/flag_en.png)
+  background-image: url(../assets/images/flag_en.png)
 }
 
 .header .header-right .header-language .header-language-flag.is-nl {
-  background-image: url(./assets/images/flag_nl.png)
+  background-image: url(../assets/images/flag_nl.png)
 }
 
 .header .header-right .header-language .header-language-dropdown {
@@ -3195,7 +3196,7 @@ body {
   margin-left: auto;
   background-position: 50%;
   background-repeat: no-repeat;
-  background-image: url(./assets/images/hamburger_blue.png);
+  background-image: url(../assets/images/hamburger_blue.png);
   background-color: transparent;
   background-size: 20px 16px;
   border: 0;
@@ -3304,7 +3305,7 @@ body {
   width: 18px;
   height: 18px;
   background-repeat: no-repeat;
-  background-image: url(./assets/images/breadcrumb_close.png);
+  background-image: url(../assets/images/breadcrumb_close.png);
   background-color: transparent;
   background-size: 18px 18px;
   border: 0;
@@ -3358,7 +3359,7 @@ body {
   padding: 0 30px;
   background-position: right 30px center;
   background-repeat: no-repeat;
-  background-image: url(./assets/images/caret_down.png);
+  background-image: url(../assets/images/caret_down.png);
   background-size: 12px 6px
 }
 
@@ -3404,7 +3405,7 @@ body {
 }
 
 .mobile-nav-backdrop .mobile-nav .mobile-nav-links .mobile-nav-link.has-dropdown.is-open span {
-  background-image: url(./assets/images/caret_up.png)
+  background-image: url(../assets/images/caret_up.png)
 }
 
 .mobile-nav-backdrop .mobile-nav .mobile-nav-links .mobile-nav-link.has-dropdown.is-open .mobile-nav-dropdown {
@@ -3443,11 +3444,11 @@ body {
 }
 
 .mobile-nav-backdrop .mobile-nav .mobile-nav-lang .mobile-nav-lang-link .mobile-nav-lang-flag.is-en {
-  background-image: url(./assets/images/flag_en.png)
+  background-image: url(../assets/images/flag_en.png)
 }
 
 .mobile-nav-backdrop .mobile-nav .mobile-nav-lang .mobile-nav-lang-link .mobile-nav-lang-flag.is-nl {
-  background-image: url(./assets/images/flag_nl.png)
+  background-image: url(../assets/images/flag_nl.png)
 }
 
 .mobile-nav-backdrop .mobile-nav .mobile-nav-lang .mobile-nav-lang-link .mobile-nav-lang-name {
@@ -3487,7 +3488,7 @@ body {
 }
 
 .mobile-nav-backdrop .mobile-nav .mobile-nav-lang.is-open:before {
-  background-image: url(./assets/images/arrow_up_black.png)
+  background-image: url(../assets/images/arrow_up_black.png)
 }
 
 .is-iphone .mobile-nav-backdrop .mobile-nav .mobile-nav-lang {
@@ -3511,7 +3512,7 @@ body {
   z-index: 0;
   width: 100%;
   height: 100vh;
-  background-image: url(https://lh6.googleusercontent.com/Pvd0q2Rak088mFTpSJCqEu7bisojHAWKs7dlj7sW8qsj1IOMnMjcPXupEZn-gmSVFqpXOr-T1C_QLokPIa4t=w2879-h1578-rw);
+  /* background-image: url(https://lh6.googleusercontent.com/Pvd0q2Rak088mFTpSJCqEu7bisojHAWKs7dlj7sW8qsj1IOMnMjcPXupEZn-gmSVFqpXOr-T1C_QLokPIa4t=w2879-h1578-rw); */
   background-size: 60%;
   background-color: black;
   background-repeat: no-repeat;
@@ -3618,7 +3619,7 @@ body {
     margin-left: -15px;
     padding: 30px;
     background-position: top 0 right -125px;
-    background-image: url(./assets/images/hero_background.jpg);
+    background-image: url(../assets/images/hero_background.jpg);
     background-size: cover;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -3895,7 +3896,7 @@ body {
   width: 15px;
   height: 21px;
   background-repeat: no-repeat;
-  background-image: url(./assets/images/arrow_down_white.png);
+  background-image: url(../assets/images/arrow_down_white.png);
   background-size: 15px 21px;
   content: ""
 }
