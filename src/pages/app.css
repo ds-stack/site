@@ -10,9 +10,9 @@ Error: wrong number of arguments (1 for 3) for `rgb'
 471:   box-shadow: rgb(52 55 65 / 12%) 0px 15px 15px 0px, rgb(52 55 65 / 17%) 0px 4px 8px 0px;
 472: }
 473: 
-474: .logos {
-475:   display: flex;
-476:   -webkit-box-align: center;
+474: .slick-list {
+475:   width: 1070px;
+476:   min-height: 130px;
 
 Backtrace:
 app.scss:471
@@ -72,4 +72,4 @@ C:/Ruby26-x64/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: wrong number of arguments (1 for 3) for `rgb'\A         on line 471 of app.scss\A \A 466:   justify-content: center;\A 467:   transition: all 0.4s ease 0s;\A 468: }\A 469: \A 470: .logo:hover {\A 471:   box-shadow: rgb(52 55 65 / 12%) 0px 15px 15px 0px, rgb(52 55 65 / 17%) 0px 4px 8px 0px;\A 472: }\A 473: \A 474: .logos {\A 475:   display: flex;\A 476:   -webkit-box-align: center;"; }
+  content: "Error: wrong number of arguments (1 for 3) for `rgb'\A         on line 471 of app.scss\A \A 466:   justify-content: center;\A 467:   transition: all 0.4s ease 0s;\A 468: }\A 469: \A 470: .logo:hover {\A 471:   box-shadow: rgb(52 55 65 / 12%) 0px 15px 15px 0px, rgb(52 55 65 / 17%) 0px 4px 8px 0px;\A 472: }\A 473: \A 474: .slick-list {\A 475:   width: 1070px;\A 476:   min-height: 130px;"; }

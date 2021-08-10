@@ -3,10 +3,11 @@ import {
   EuiTabs,
   EuiTab,
   EuiToolTip,
-  EuiLink,
-  EuiText,
 } from '@elastic/eui';
 import { EuiStepsHorizontal } from '../components/eui-overrides/steps_horizontal';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const euiStyles = {
   display: 'flex',
@@ -50,12 +51,12 @@ const careerTabs = [
   },
 ];
 
-const CareerCompanyImage = ({ src, children }: { src?: string, children?: any }) => (
+const CareerCompanyImage = ({src, children}: { src?: string, children?: any }) => (
   <>
     <div className="logo logo-career">
       <a href="/">
         <EuiToolTip position="top" content="Here is some tooltip text">
-          <img src={src} alt=" " className="img-fluid" />
+          <img src={src} alt=" " className="img-fluid"/>
         </EuiToolTip>
       </a>
       {children}
@@ -63,44 +64,104 @@ const CareerCompanyImage = ({ src, children }: { src?: string, children?: any })
   </>
 );
 
+const techStack = {
+  frontend: [
+    'react',
+    'redux',
+    'vuejs',
+    'vuex',
+    'flux',
+    'mobx',
+    'ecmascript',
+    'typescript',
+    'javascript',
+    'html',
+    'css',
+    'yarn',
+    'npm',
+    'jest',
+    'mocha',
+    'jasmine',
+    'jquery',
+    'gulp',
+    'grunt',
+    'bootstrap',
+    'sass',
+    'less',
+    'postcss',
+    'webpack',
+    'babel',
+  ],
+  backend: [],
+  devops: [
+    'docker',
+    'aws',
+    'azure',
+    'heroku',
+    'gcp',
+    'portainer',
+    'jenkins',
+    'travis',
+    'kubernetes',
+    'elk',
+    'graylog',
+    'splunk',
+    'prometheus',
+    'pagerduty',
+    'digitalocean',
+    'rackspace',
+    'datadog',
+    'apache',
+    'nginx',
+    'linux',
+    'unix',
+    'bash',
+    'vim',
+  ],
+}
+
 const careerSteps = [
   {
     title: 'Reccode',
     isComplete: true,
     onClick: () => undefined,
-    render: () =>  <CareerCompanyImage src={'https://media-exp1.licdn.com/dms/image/C510BAQGcI5ac4iR8MQ/company-logo_200_200/0/1519910708977?e=1636588800&v=beta&t=tA9gUEq3KbzM1GdODkb1dRYqv-YP47HOOgvnNjmSZ1o'} />,
+    render: () => <CareerCompanyImage
+      src={'https://media-exp1.licdn.com/dms/image/C510BAQGcI5ac4iR8MQ/company-logo_200_200/0/1519910708977?e=1636588800&v=beta&t=tA9gUEq3KbzM1GdODkb1dRYqv-YP47HOOgvnNjmSZ1o'}/>,
   },
   {
     title: 'Cubes',
     isComplete: true,
     onClick: () => undefined,
-    render: () =>  <CareerCompanyImage src={'http://cubes.rs/wp-content/uploads/2018/12/logo-cube.png'} />,
+    render: () => <CareerCompanyImage src={'http://cubes.rs/wp-content/uploads/2018/12/logo-cube.png'}/>,
   },
   {
     title: 'Telenor',
     isComplete: true,
     onClick: () => undefined,
-    render: () =>  <CareerCompanyImage src={'https://www.telenor.rs/assets/img/logos/telenor-logo.png'} />,
+    render: () => <CareerCompanyImage src={'https://www.telenor.rs/assets/img/logos/telenor-logo.png'}/>,
   },
   {
     title: 'Ragebite',
     isComplete: true,
     onClick: () => undefined,
-    render: () => <CareerCompanyImage src={'https://pbs.twimg.com/profile_images/1405147287202897923/z6URuPuU_400x400.jpg'} />
+    render: () => <CareerCompanyImage
+      src={'https://pbs.twimg.com/profile_images/1405147287202897923/z6URuPuU_400x400.jpg'}/>
   },
   {
     title: 'Endava',
     isComplete: true,
     onClick: () => undefined,
     isSelected: true,
-    render: () => <CareerCompanyImage src={'https://www.agile-serbia.rs/wp-content/uploads/2017/10/Endava-logo-site.png'} />
+    render: () => <CareerCompanyImage
+      src={'https://www.agile-serbia.rs/wp-content/uploads/2017/10/Endava-logo-site.png'}/>
   },
   {
     title: 'Holycode',
     isComplete: true,
     onClick: () => undefined,
     isSelected: true,
-    render: () => <CareerCompanyImage src={'https://media.itkonekt.com/2018/02/logoandslogan-holycode-vektorski-1-1.png'} />
+    render: () => <CareerCompanyImage
+      src={'https://media.itkonekt.com/2018/02/logoandslogan-holycode-vektorski-1-1.png'}/>
   },
 ];
 
@@ -202,37 +263,48 @@ const Index: FC = () => {
               <div style={euiStyles}>
                 <EuiTabs display="condensed">{renderTabs()}</EuiTabs>
               </div>
-              <div className="jsx-2202876063 logos">
-                <div className="jsx-2202876063 logo"><a
-                  href="/elasticon/conf/2016/sf/dude-where-are-my-messages-message-analytics-at-netflix?elektra=home&amp;storm=logo-bar"><img
-                  src="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt0be4c202c53a151b/5f32ba7a48d3b57cb9749aa9/logohome-netflix.svg"
-                  alt="Netflix Logo" className="jsx-2202876063 img-fluid"/></a></div>
-                <div className="jsx-2202876063 logo"><a
-                  href="/elasticon/conf/2017/sf/powering-uber-marketplace-real-time-data-needs-with-elasticsearch?elektra=home&amp;storm=logo-bar"><img
-                  src="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt807449107d226e2c/5f32ba88d9a24d7c67e50819/logohome-uber.svg"
-                  alt="Uber Logo" className="jsx-2202876063 img-fluid"/></a></div>
-                <div className="jsx-2202876063 logo"><a
-                  href="/elasticon/conf/2017/sf/security-at-slack?elektra=home&amp;storm=logo-bar"><img
-                  src="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt377031d153fa9bbd/5f32ba90327a6201d7ebae22/logohome-slack.svg"
-                  alt="Slack Logo" className="jsx-2202876063 img-fluid"/></a></div>
-                <div className="jsx-2202876063 logo"><a href="/customers/twilio?elektra=home&amp;storm=logo-bar"><img
-                  src="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt3b5ac9082fc8cdb7/5f32ba979af97004e7f64138/logohome-twilio.svg"
-                  alt="Twilio Logo" className="jsx-2202876063 img-fluid"/></a></div>
-                <div className="jsx-2202876063 logo"><a
-                  href="/elasticon/conf/2018/sf/monitor-your-cloud-environment-with-the-logstash-azure-monitoring-module?elektra=home&amp;?storm=logo-bar"><img
-                  src="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/bltadbe0f2aa60f3388/5f32baa07ca22b018aed88f1/logohome-microsoft.svg"
-                  alt="Microsoft Logo" className="jsx-2202876063 img-fluid"/></a></div>
-              </div>
+              <Slider {...{
+                dots: false,
+                infinite: true,
+                arrows: false,
+                speed: 400,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                slidesToShow: 5,
+                slidesToScroll: 5,
+              }} className='logos'>
+                {
+                  techStack[selectedTabId].map((item: string) => ((
+                    <div className="logo" key={`${Math.random()}-${item}`}>
+                      <a href="/">
+                        <EuiToolTip position="top" content={item.toUpperCase()}>
+                          <img
+                            src={`/static/images/tech-stack/${selectedTabId}/${item}.jpg`}
+                            alt={item}
+                            className="img-fluid"
+                          />
+                        </EuiToolTip>
+                      </a>
+                    </div>
+                  )))
+                }
+              </Slider>
             </div>
 
             <p className="lead margin50">Curious about my career?</p>
             <div className="about-h5">
-              <p className="about-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum non magna et ultrices. Sed sapien sem, semper id dignissim non, blandit ut sem. Cras scelerisque est vel enim elementum gravida. Aenean blandit felis ut magna rutrum, nec efficitur eros efficitur. Cras dapibus tellus nec pellentesque feugiat. Morbi mollis convallis massa, eu laoreet lorem interdum vitae. Donec ex risus, dapibus sed molestie in, sagittis non urna. Ut efficitur pharetra tellus vitae gravida. Mauris dapibus metus ac sapien vehicula fermentum sed quis nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi porttitor arcu ac pretium faucibus.</p>
+              <p className="about-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum non
+                magna et ultrices. Sed sapien sem, semper id dignissim non, blandit ut sem. Cras scelerisque est vel
+                enim elementum gravida. Aenean blandit felis ut magna rutrum, nec efficitur eros efficitur. Cras dapibus
+                tellus nec pellentesque feugiat. Morbi mollis convallis massa, eu laoreet lorem interdum vitae. Donec ex
+                risus, dapibus sed molestie in, sagittis non urna. Ut efficitur pharetra tellus vitae gravida. Mauris
+                dapibus metus ac sapien vehicula fermentum sed quis nibh. Orci varius natoque penatibus et magnis dis
+                parturient montes, nascetur ridiculus mus. Morbi porttitor arcu ac pretium faucibus.</p>
               <div style={euiStyles}>
                 <EuiTabs display="condensed">{renderCareerTabs()}</EuiTabs>
               </div>
               <div style={euiStyles}>
-                <EuiStepsHorizontal style={{ width: 1170 }} steps={careerSteps} />
+                <EuiStepsHorizontal style={{width: 1170}} steps={careerSteps}/>
               </div>
             </div>
             <div className="container">

@@ -11,7 +11,6 @@ const Chrome: FC = ({ children }) => {
       <EuiPageBody className="home-template homepage">
         {children}
       </EuiPageBody>
-      <script src="https://use.fontawesome.com/d120348b09.js" type="628966b9620b7a8806a3bc0c-text/javascript" />
     </EuiPage>
   );
 };

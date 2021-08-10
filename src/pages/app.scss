@@ -471,8 +471,24 @@ template {
   box-shadow: rgb(52 55 65 / 12%) 0px 15px 15px 0px, rgb(52 55 65 / 17%) 0px 4px 8px 0px;
 }
 
-.logos {
+.slick-list {
+  width: 1070px;
+  min-height: 130px;
+}
+
+.slick-slide > div > div > a {
   display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.slick-slide > div > div > a > span > img {
+  max-height: 110px !important;
+  max-width: 160px !important;
+}
+
+.logos {
+  display: flex !important;
   -webkit-box-align: center;
   align-items: center;
   -webkit-box-pack: center;

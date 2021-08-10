@@ -27,17 +27,6 @@ function themeLink(theme: Theme): ReactElement {
   );
 }
 
-/**
- * A custom `Document` is commonly used to augment your application's
- * `<html>` and `<body>` tags. This is necessary because Next.js pages skip
- * the definition of the surrounding document's markup.
- *
- * In this case, we customize the default `Document` implementation to
- * inject the available EUI theme files.  Only the `light` theme is
- * initially enabled.
- *
- * @see https://nextjs.org/docs/advanced-features/custom-document
- */
 export default class MyDocument extends Document {
   render(): ReactElement {
     return (
@@ -47,6 +36,7 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
+        <script src="https://use.fontawesome.com/d120348b09.js" type="628966b9620b7a8806a3bc0c-text/javascript" />
       </Html>
     );
   }
