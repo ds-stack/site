@@ -506,6 +506,19 @@ template {
   margin: 0 0 60px !important;
 }
 
+.euiStepHorizontal__item:before {
+  display: none;
+}
+
+.euiStepHorizontal__item > div {
+  margin-top: 0;
+  width: 130px !important;
+}
+
+.euiStepHorizontal__item > div > a > span > img {
+  max-width: 100px !important;
+}
+
 .container.is-small {
   width: 830px
 }

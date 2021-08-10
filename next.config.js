@@ -145,7 +145,7 @@ const nextConfig = {
     };
 
     for (const path of dynamicPaths) {
-      pathMap[`/my-app${path}`] = { page: '/my-app/[slug]' };
+      // pathMap[`/my-app${path}`] = { page: '/my-app/[slug]' };
     }
 
     return pathMap;

@@ -1,15 +1,17 @@
 import React, { FC, useState } from 'react';
 import {
-  EuiStepsHorizontal,
   EuiTabs,
   EuiTab,
+  EuiToolTip,
+  EuiLink,
+  EuiText,
 } from '@elastic/eui';
-
+import { EuiStepsHorizontal } from '../components/eui-overrides/steps_horizontal';
 
 const euiStyles = {
   display: 'flex',
   justifyContent: 'center',
-  marginTop: 32,
+  marginTop: 60,
 };
 
 const tabs = [
@@ -30,56 +32,97 @@ const tabs = [
   },
 ];
 
+const careerTabs = [
+  {
+    id: 'professional',
+    name: 'Full-Time',
+    disabled: false,
+  },
+  {
+    id: 'contract',
+    name: 'Contract',
+    disabled: false,
+  },
+  {
+    id: 'other',
+    name: 'Other',
+    disabled: false,
+  },
+];
+
+const CareerCompanyImage = ({ src, children }: { src?: string, children?: any }) => (
+  <>
+    <div className="logo logo-career">
+      <a href="/">
+        <EuiToolTip position="top" content="Here is some tooltip text">
+          <img src={src} alt=" " className="img-fluid" />
+        </EuiToolTip>
+      </a>
+      {children}
+    </div>
+  </>
+);
+
 const careerSteps = [
   {
     title: 'Reccode',
     isComplete: true,
     onClick: () => undefined,
-    className: 'career-steps',
-    step: 2013,
+    render: () =>  <CareerCompanyImage src={'https://media-exp1.licdn.com/dms/image/C510BAQGcI5ac4iR8MQ/company-logo_200_200/0/1519910708977?e=1636588800&v=beta&t=tA9gUEq3KbzM1GdODkb1dRYqv-YP47HOOgvnNjmSZ1o'} />,
   },
   {
     title: 'Cubes',
     isComplete: true,
     onClick: () => undefined,
-    step: 2015,
+    render: () =>  <CareerCompanyImage src={'http://cubes.rs/wp-content/uploads/2018/12/logo-cube.png'} />,
   },
   {
     title: 'Telenor',
     isComplete: true,
     onClick: () => undefined,
-    step: 2017,
+    render: () =>  <CareerCompanyImage src={'https://www.telenor.rs/assets/img/logos/telenor-logo.png'} />,
   },
   {
     title: 'Ragebite',
     isComplete: true,
     onClick: () => undefined,
-    step: 2018,
+    render: () => <CareerCompanyImage src={'https://pbs.twimg.com/profile_images/1405147287202897923/z6URuPuU_400x400.jpg'} />
   },
   {
     title: 'Endava',
     isComplete: true,
     onClick: () => undefined,
     isSelected: true,
-    step: 2019,
+    render: () => <CareerCompanyImage src={'https://www.agile-serbia.rs/wp-content/uploads/2017/10/Endava-logo-site.png'} />
   },
   {
     title: 'Holycode',
     isComplete: true,
     onClick: () => undefined,
     isSelected: true,
-    step: 2021,
+    render: () => <CareerCompanyImage src={'https://media.itkonekt.com/2018/02/logoandslogan-holycode-vektorski-1-1.png'} />
   },
 ];
 
 const Index: FC = () => {
   const [selectedTabId, setSelectedTabId] = useState('backend');
+  const [selectedCareerTabId, setSelectedCareerTabId] = useState('professional');
 
   const onSelectedTabChanged = (id: string) => setSelectedTabId(id);
   const renderTabs = () => tabs.map((tab, index) => (
     <EuiTab
       onClick={() => onSelectedTabChanged(tab.id)}
       isSelected={tab.id === selectedTabId}
+      disabled={tab.disabled}
+      key={index}>
+      {tab.name}
+    </EuiTab>
+  ));
+
+  const renderCareerTabs = () => careerTabs.map((tab, index) => (
+    <EuiTab
+      onClick={() => setSelectedCareerTabId(tab.id)}
+      isSelected={tab.id === selectedCareerTabId}
       disabled={tab.disabled}
       key={index}>
       {tab.name}
@@ -184,8 +227,10 @@ const Index: FC = () => {
 
             <p className="lead margin50">Curious about my career?</p>
             <div className="about-h5">
-              <p className="about-p">Full Stack Software Developer with 7+ years of experience in the industry, doing
-                photography for 8 years now, adrenaline junkie, music addict.</p>
+              <p className="about-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum non magna et ultrices. Sed sapien sem, semper id dignissim non, blandit ut sem. Cras scelerisque est vel enim elementum gravida. Aenean blandit felis ut magna rutrum, nec efficitur eros efficitur. Cras dapibus tellus nec pellentesque feugiat. Morbi mollis convallis massa, eu laoreet lorem interdum vitae. Donec ex risus, dapibus sed molestie in, sagittis non urna. Ut efficitur pharetra tellus vitae gravida. Mauris dapibus metus ac sapien vehicula fermentum sed quis nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi porttitor arcu ac pretium faucibus.</p>
+              <div style={euiStyles}>
+                <EuiTabs display="condensed">{renderCareerTabs()}</EuiTabs>
+              </div>
               <div style={euiStyles}>
                 <EuiStepsHorizontal style={{ width: 1170 }} steps={careerSteps} />
               </div>
